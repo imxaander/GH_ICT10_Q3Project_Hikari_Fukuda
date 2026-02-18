@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <link rel="stylesheet" href="./top_bar.css">
+    <title>Intrams team</title>
+</head>
+<style>
+    body{
+        background-image: url("iii.jpg");
+        text-align: center;
+    }
+
+    .button {
+        text-align: center;
+        font-size: 20px;
+        border-radius: 80px;
+        margin: 15px auto;
+        padding: 10px 20px;
+        height: 50px;
+            max-width: 1000px; /* Changed to maintain 1000px width */
+        width: 200%;
+        display: block;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+    }
+
+     #top_bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 16px;
+        }
+        #second_top_bar {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        #second_top_bar a {
+            text-decoration: none;
+            color: #000;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+        #second_top_bar a:hover {
+            background: rgba(0,0,0,0.06);
+        }
+</style>
+    <link rel="stylesheet" href="../top_bar.css">
+<body>
+
+      <div id="top_bar">
+         <h4 id="intramurals">Intramurals SY 2025-2026</h4> 
+            <div id="second_top_bar">
+                <a href="skillstest.html">Sign Up</a>
+                <a href="seatwork2.html">Team Checker</a>
+                <a href="index.html">Players</a>
+            </div>
+        </div>
+
+    <h1>Seatwork 2 Third Quarter</h1>
+    <p>Are you done with the online registration?</p>
+    <input type="radio" name="registrationQuesiton"  id="doneWithReg">
+    <label for="">Yes</label>
+    <input type="radio" name="registrationQuesiton">
+    <label for="">No</label>
+
+
+    <p>Do you have the medical clearance from the clinic?</p>
+    <input type="radio" name="medicalQuesiton" id="haveMedClearance">
+    <label for="">Yes</label>
+    <input type="radio" name="medicalQuesiton">
+    <label for="">No</label>
+
+    <p>what's your Grade & Section?</p>
+    <select id="gradeLevel">
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    </select>
+
+    <select id="section">
+    <option value="Ruby">Ruby</option>
+    <option value="Sapphire">Sapphire</option>
+    <option value="Topaz">Topaz</option>
+    <option value="Emerald">Emerald</option>
+    </select>
+
+    <br>
+   <div id="messageDiv"></div>
+   <button id="button" class="button"type="" py-click="checkIfEligible">Sign Up</button>
+
+   <div id="messageDiv">
+        <p id="message"></p>
+        <img id="messageImage" src="" alt="">
+   </div>
+   <div id="output"></div>
+</body>
+
+    <py-script src="seatwork.py"></py-script>
+</html>

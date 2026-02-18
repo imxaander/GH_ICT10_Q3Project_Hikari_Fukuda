@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <link rel="stylesheet" href="./top_bar.css">
+    <title></title>
+    <style>
+        body{
+        background-image: url("iii.jpg");
+        text-align: center;
+    }
+
+    .button {
+        text-align: center;
+        font-size: 20px;
+        border-radius: 80px;
+        margin: 15px auto;
+        padding: 10px 20px;
+        height: 50px;
+            max-width: 1000px; /* Changed to maintain 1000px width */
+        width: 200%;
+        display: block;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+    }
+
+     #top_bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 16px;
+        }
+        #second_top_bar {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        #second_top_bar a {
+            text-decoration: none;
+            color: #000;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+        #second_top_bar a:hover {
+            background: rgba(0,0,0,0.06);
+        }
+        #showPlayerList {
+            background-color: #1e00ff;
+            color: white;
+            border: none;
+            padding: 10px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 15px auto;
+            display: block;
+        }
+        #showPlayerList:hover {
+            background-color: #10194c;
+        }
+        .form-card {
+            background: rgba(255,255,255,0.95);
+            padding: 18px 20px;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            display: inline-block;
+            text-align: center;
+            max-width: 420px;
+            width: 90%;
+        }
+    </style>
+</head>
+<link rel="stylesheet" href="../top_bar.css">
+<body>
+
+      <div id="top_bar">
+         <h4 id="intramurals">Intramurals SY 2025-2026</h4> 
+            <div id="second_top_bar">
+                <a href="skillstest.html">Sign Up</a>
+                <a href="seatwork2.html">Team Checker</a>
+                <a href="index.html">Players</a>
+            </div>
+        </div>
+    <div class="form-card">
+        <h2>Intramurals Players</h2>
+        <button id="showPlayerList" py-click="showPlayerlist">Click here</button>
+        <div id="playerlist"></div>
+    </div>
+    <div id="output"></div>
+</body>
+    <py-script src="classmates.py"></py-script>
+</html>
