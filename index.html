@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
-    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
-    <link rel="stylesheet" href="./top_bar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.11.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.11.1/core.js"></script>   
+    <link rel="stylesheet" href="./top_bar.css"> 
     <title></title>
     <style>
+       
         body{
         background-image: url("iii.jpg");
         text-align: center;
@@ -46,7 +46,27 @@
         #second_top_bar a:hover {
             background: rgba(0,0,0,0.06);
         }
-        #showPlayerList {
+        input[type="text"], input[type="password"] {
+            display: block;
+            margin: 10px auto;
+            padding: 8px;
+            width: 250px;
+            text-align: center;
+        }
+        /* White card behind the form to improve readability */
+        .form-card {
+            background: rgba(255,255,255,0.95);
+            padding: 20px 24px;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            display: inline-block;
+            text-align: center;
+            max-width: 360px;
+            width: 90%;
+        }
+        #signupButton {
+            display: block;
+            margin: 15px auto;
             background-color: #1e00ff;
             color: white;
             border: none;
@@ -54,41 +74,35 @@
             font-size: 16px;
             border-radius: 5px;
             cursor: pointer;
-            margin: 15px auto;
-            display: block;
         }
-        #showPlayerList:hover {
+        #signupButton:hover {
             background-color: #10194c;
-        }
-        .form-card {
-            background: rgba(255,255,255,0.95);
-            padding: 18px 20px;
-            border-radius: 8px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-            display: inline-block;
-            text-align: center;
-            max-width: 420px;
-            width: 90%;
         }
     </style>
 </head>
-<link rel="stylesheet" href="../top_bar.css">
-<body>
+    <link rel="stylesheet" href="../top_bar.css">
 
-      <div id="top_bar">
-         <h4 id="intramurals">Intramurals SY 2025-2026</h4> 
+    <body>
+        <div id="top_bar">
+            <h4 id="intramurals">Intramurals SY 2025-2026</h4> 
             <div id="second_top_bar">
-                <a href="skillstest.html">Sign Up</a>
+                <a href="index.html">Sign Up</a>
                 <a href="seatwork2.html">Team Checker</a>
-                <a href="index.html">Players</a>
+                <a href="playerlist.html">Players</a>
             </div>
         </div>
-    <div class="form-card">
-        <h2>Intramurals Players</h2>
-        <button id="showPlayerList" py-click="showPlayerlist">Click here</button>
-        <div id="playerlist"></div>
-    </div>
-    <div id="output"></div>
-</body>
-    <py-script src="classmates.py"></py-script>
+
+        <div class="form-card">
+            <h2>Create Account</h2>
+            <input type="text" value="" id="usernameInput">
+            <br>
+            <input type="password" value="" id="passwordInput">
+            <br>
+            <button type="" id="signupButton" py-click="signUp">Sign Up</button>
+            <p id="errorMessage"></p>
+        </div>
+
+    </body>
+
+    <py-script src="skillstest.py"></py-script>
 </html>
